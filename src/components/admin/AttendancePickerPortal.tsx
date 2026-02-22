@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import { Trash2 } from 'lucide-react';
-import { ATTENDANCE_TYPES, type AttendanceRecord } from '../data';
+import { ATTENDANCE_TYPES, type AttendanceRecord } from '../../data';
 
 interface AttendancePickerPortalProps {
   anchorRect: DOMRect;
