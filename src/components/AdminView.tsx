@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { useAuth } from '../context';
 import { Schedule } from './Schedule';
-import { Tests } from './Tests';
 import { BookOpen, Calendar, ClipboardList, Users, LogOut, Tag, BarChart3 } from 'lucide-react';
 
 import { AdminDashboard } from './admin/AdminDashboard';
 import { LessonTypesManager } from './admin/LessonTypesManager';
 import { Journal } from './admin/Journal';
 import { StudentsManager } from './admin/StudentsManager';
+import { TestsManager } from './admin/TestsManager';
 
 type Tab = 'dashboard' | 'schedule' | 'journal' | 'tests' | 'students' | 'lessonTypes';
 
@@ -75,7 +75,7 @@ export const AdminView: React.FC = () => {
         {activeTab === 'dashboard' && <AdminDashboard />}
         {activeTab === 'schedule' && <Schedule editable={scheduleEditMode} onEditModeChange={setScheduleEditMode} onOpenLessonPage={handleOpenLessonPage} />}
         {activeTab === 'journal' && <Journal />}
-        {activeTab === 'tests' && <Tests />}
+        {activeTab === 'tests' && <TestsManager />}
         {activeTab === 'students' && <StudentsManager />}
         {activeTab === 'lessonTypes' && <LessonTypesManager />}
       </main>
